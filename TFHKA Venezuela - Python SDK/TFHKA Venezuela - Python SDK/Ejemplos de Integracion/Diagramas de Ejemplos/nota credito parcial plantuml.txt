@@ -1,0 +1,122 @@
+@startuml
+start
+
+if (PORTOPEN) then (Sí)
+  :Mostrar mensaje de puerto abierto;
+  :Presione enter para continuar;
+  
+  if (Envio de comando FLAG 50 en 01) then (Sí)
+    :Mostrar comando enviado: PJ500;
+  else (No)
+    :Mostrar comando no aceptado: PJ501;
+    
+  endif
+
+  if (Envio de comando NUMERO_FACTURA_AFECTADA) then (Sí)
+    :Mostrar comando enviado:NUMERO_FACTURA_AFECTADA;
+  else (No)
+    :Mostrar comando no aceptado:NUMERO_FACTURA_AFECTADA;    
+  
+  endif 
+  if (Envio de comando NUMERO_FECHA_FAC_AFECTADA) then (Sí)
+    :Mostrar comando enviado:NUMERO_FECHA_FAC_AFECTADA;
+  else (No)
+    :Mostrar comando no aceptado:NUMERO_FECHA_FAC_AFECTADA;    
+  
+  endif 
+  if (Envio de comando NUMERO_REGISTRO) then (Sí)
+    :Mostrar comando enviado:NUMERO_REGISTRO;
+  else (No)
+    :Mostrar comando no aceptado:NUMERO_REGISTRO;    
+  
+  endif 
+
+  if (Envio de comando RAZON SOCIAL) then (Sí)
+    :Mostrar comando enviado:COMMAND_SOCIALREASON;
+  else (No)
+    :Mostrar comando no aceptado:COMMAND_SOCIALREASON;    
+  
+  endif    
+
+  if (Envio de comando RIF) then (Sí)
+    :Mostrar comando enviado:RIF;
+  else (No)
+    :Mostrar comando no aceptado:RIF;    
+  
+  endif   
+  
+  if (Envio de comando ADDRESS_LINE1) then (Sí)
+    :Mostrar comando enviado:ADDRESS_LINE1;
+  else (No)
+    :Mostrar comando no aceptado:ADDRESS_LINE1;    
+  
+  endif     
+  
+  if (Envio de comando ADDRESS_LINE2) then (Sí)
+    :Mostrar comando enviado:ADDRESS_LINE2;
+  else (No)
+    :Mostrar comando no aceptado:ADDRESS_LINE2;    
+  
+  endif       
+  
+  if (Envio de comando COMMAND_COMMENT) then (Sí)
+    :Mostrar comando enviado:COMMAND_COMMENT;
+  else (No)
+    :Mostrar comando no aceptado:COMMAND_COMMENT;    
+  endif 
+
+  
+  if (Envio de comando PLU1) then (Sí)
+    :Mostrar comando enviado:PLU1;
+  else (No)
+    :Mostrar comando no aceptado:PLU1;    
+  endif    
+  
+  if (Envio de comando PLU2) then (Sí)
+    :Mostrar comando enviado:PLU2;
+  else (No)
+    :Mostrar comando no aceptado:PLU2;    
+  endif       
+  if (Envio de comando PLU3) then (Sí)
+    :Mostrar comando enviado:PLU3;
+  else (No)
+    :Mostrar comando no aceptado:PLU3;    
+  endif       
+
+  if (Envio de comando PLU4) then (Sí)
+    :Mostrar comando enviado:PLU4;
+  else (No)
+    :Mostrar comando no aceptado:PLU4;    
+  endif       
+  
+  if (Envio de comando COMMAND_COMMENT) then (Sí)
+    :Mostrar comando enviado:COMMAND_COMMENT;
+  else (No)
+    :Mostrar comando no aceptado:COMMAND_COMMENT;    
+  endif         
+
+  if (Envio de comando COMMAND_SUBTOTAL) then (Sí)
+    :Mostrar comando enviado:COMMAND_SUBTOTAL;
+  else (No)
+    :Mostrar comando no aceptado:COMMAND_SUBTOTAL;    
+  endif         
+    
+  if (Envio de comando PAGO_TOTAL) then (Sí)
+    :Mostrar comando enviado:COMMAND_PAGO_TOTAL ;
+  else (No)
+    :Mostrar comando no aceptado:COMMAND_PAGO_TOTAL;    
+  endif     
+     
+  if (Envio de comando CIERRE_FACTURA) then (Sí)
+    :Mostrar comando enviado:COMMAND_CIERRE_FACTURA ;
+  else (No)
+    :Mostrar comando no aceptado:COMMAND_CIERRE_FACTURA;    
+  endif        
+
+else (No)
+  :Mostrar mensaje de NO SE PUDO ESTABLECER COMUNICACION CON LA IMPRESORA;
+  :Mostrar mensaje de PUERTO CERRADO;
+
+
+endif
+@enduml
